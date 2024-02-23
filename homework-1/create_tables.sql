@@ -19,7 +19,7 @@ CREATE TABLE customers
 CREATE TABLE orders
 (
 	order_id int PRIMARY KEY,
-	customer_id char(5) UNIQUE REFERENCES customers(customer_id) NOT NULL,
+	customer_id char(5) REFERENCES customers(customer_id) NOT NULL,
 	employee_id int REFERENCES employees(employee_id) NOT NULL,
 	order_date date NOT NULL,
 	ship_city varchar(50) NOT NULL
